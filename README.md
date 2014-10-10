@@ -1,2 +1,1 @@
-rapid-news
-==========
+# Rapid News #
