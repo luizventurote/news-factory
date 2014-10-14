@@ -2,10 +2,34 @@
 
 Class Template {
 
-	private $html_template;
+	public $html_template;
+	public $process_page 	= "process.php";
+	public $img_page 		= array();
+	public $dados_page 		= array();
+	public $img_url 		= URL_IMG;
 
-	function __construct() { 
+	function __construct($dados_template = null, $images_template = null) {
+
+		// Prepara o array de dados
+		if($dados_template != null) {
+			foreach($dados_template as $key) {
+				foreach($key as $value_key => $value) {
+					$this->dados_page[$value_key] = $value;
+				}
+			}
+		}
+
+		// Prepara o array de imagens
+		if($images_template != null) {
+			foreach($images_template as $key) {
+				foreach($key as $value_key => $value) {
+					$this->img_page[$value_key] = $value;
+				}
+			}
+		} 
+		
 		$this->html_template = $this->getHeader().$this->getContent().$this->getFooter();
+
 	} 
 
 	public function getTemplate() {
@@ -14,26 +38,9 @@ Class Template {
 
 	}
 
-	private function getHeader() {
+	private function getHeader() {}
 
-		$str = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-			<html xmlns="http://www.w3.org/1999/xhtml"><head>
-				
-				<title>Vide Bula - Unconventional Denin Deluxe</title>
-				<meta content="text/html; charset=iso-8859-1" https-equiv="Content-Type" />
-				
-			</head>';
-
-		return $str;
-	}
-
-	private function getFooter() {
-
-		$str = $this->getStyle().'</body></html>';
-
-		return $str;
-
-	}
+	private function getFooter() {}
 
 	public function getContent() {
 
@@ -110,10 +117,33 @@ Class Template {
 		$doc->loadHTML($this->html_template);
 		$doc->saveHTML();
 
+		//gera um nome unico para o arquivo
+
+		if( !empty($this->dados_page['news-titulo']) ) {
+			$novo_nome = 'news/'.$this->dados_page['news-titulo'].'_'.time().'.html';
+		} else {
+			$novo_nome = 'news/'.time().'.html'; 	
+		}
+
 		#Criar o arquivo
-		$fp = fopen("teste.html", "w");
+		$fp = fopen($novo_nome, "w");
 		$fw = fwrite($fp, $doc->saveHTML());
 
+	}
+
+	private function getForm() {
+
+		$str = '';
+
+		return $str;
+	}
+
+	public function getImage($image_key) {
+
+		if( !empty($this->img_page)) {
+			return $this->img_page[$image_key];
+		}
+		
 	}
 
 }

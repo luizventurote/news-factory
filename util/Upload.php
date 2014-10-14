@@ -5,13 +5,18 @@ class Upload {
 	private $arquivo; 
 	private $altura; 
 	private $largura; 
-	private $pasta; 
+	private $pasta;
+	private $novo_nome;
 
 	function __construct($arquivo, $altura, $largura, $pasta) { 
 		$this->arquivo 	= $arquivo; 
 		$this->altura 	= $altura; 
 		$this->largura 	= $largura; 
 		$this->pasta 	= $pasta; 
+	} 
+
+	public function getNovoNome() { 
+		return $this->novo_nome; 
 	} 
 
 	private function getExtensao() { 
@@ -89,10 +94,10 @@ class Upload {
 		$extensao = $this->getExtensao(); 
 
 		//gera um nome unico para a imagem em funcao do tempo 
-		$novo_nome = time() . '.' . $extensao; 
+		$this->novo_nome = time() . '.' . $extensao; 
 
 		//localizacao do arquivo 
-		$destino = $this->pasta . $novo_nome; 
+		$destino = $this->pasta . $this->novo_nome; 
 
 		//move o arquivo
 		if (! move_uploaded_file($this->arquivo['tmp_name'], $destino)) { 

@@ -9,7 +9,7 @@
 		<?php for ($i=1; $i <= QTD_TEMPLATES; $i++): ?>
 
 		<li>
-			<a href="template-<?= $i ?>.php">Template <?= $i ?></a>
+			<a href="template.php?template=<?= $i ?>">Template <?= $i ?></a>
 		</li>
 		
 		<?php endfor; ?>
