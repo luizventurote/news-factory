@@ -44,7 +44,57 @@ Class Template {
 
 	public function getContent() {}
 
-	public function getStyle() {}
+	public function getStyle() {
+
+		$str = '
+			<style type="text/css">
+
+				table {
+					border-collapse: collapse;
+			        border-spacing: 0;
+					width:100%;
+					height: auto;
+					margin:0px;padding:0px;
+				}
+
+				td {
+					vertical-align:middle;
+					text-align:left;
+					padding:0px;
+				}
+
+				img {
+					border: 0;
+				}
+
+				.table-main {
+					margin: auto;
+					width: 570px;
+				}
+
+				.table-inside tr td {
+					text-align: center;
+					padding-bottom: 14px;
+				}
+
+				.table-inside tr td:first-child {
+					text-align: left;
+				}
+
+				.table-inside tr td:last-child {
+					text-align: right;
+				}
+
+				.text-min {
+					font-size: 0.7em;
+				}
+
+			</style>
+		';
+
+		return $str;
+
+	}
 
 	public function saveHTML() {
 

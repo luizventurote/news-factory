@@ -1,9 +1,13 @@
-<?php include_once 'inc/header.php'; ?>
-<?php include_once 'template/Template.php'; ?>
-<?php include_once 'template/Template_1.php'; ?>
-<?php include_once 'template/Template_2.php'; ?>
+<?php 
 
-<?php
+include_once 'inc/header.php'; 
+
+// Templates
+include_once 'template/Template.php'; 
+for ($i=1; $i<=QTD_TEMPLATES; $i++) { 
+	include_once 'template/Template_'.$i.'.php'; 
+}
+
 
 	if( !empty($_GET["template"]) ) { 
 	
@@ -30,6 +34,5 @@
 	// Print form
 	echo $template->getForm();
 
-?>
 
-<?php include_once 'inc/footer.php'; ?>
+include_once 'inc/footer.php'; ?>

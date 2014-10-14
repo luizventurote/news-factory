@@ -99,7 +99,7 @@ Class Template_2 extends Template {
 				    <title></title>
 				    <meta https-equiv='Content-Type' content='text/html; charset=iso-8859-1' />
 				  </head>
-				  <body leftmargin='0' topmargin='0' marginwidth='0'  bgcolor='#FFFFFF' marginheight='0'>
+				  <body leftmargin='0' topmargin='0' marginwidth='0'  bgcolor='#FFFFFF' marginheight='0' style='color: #000; font-family: Helvetica, Arial, sans-serif; font-weight: normal; line-height: 1.3;'>
 				    <table style='margin: auto; width: 570px;' border='0' align='center' cellpadding='0' cellspacing='0' bgcolor='#FFFFFF'>";
 
 		$str .= '
@@ -199,48 +199,8 @@ Class Template_2 extends Template {
 
 		';
 
-		$str .= '
-
-			<style type="text/css">
-
-				table {
-					border-collapse: collapse;
-			        border-spacing: 0;
-					width:100%;
-					height:100%;
-					margin:0px;padding:0px;
-				}
-
-				td {
-					vertical-align:middle;
-					text-align:left;
-					padding:0px;
-				}
-
-				img {
-					border: 0;
-				}
-
-				.table-inside tr td {
-					text-align: center;
-					padding-bottom: 14px;
-				}
-
-				.table-inside tr td:first-child {
-					text-align: left;
-				}
-
-				.table-inside tr td:last-child {
-					text-align: right;
-				}
-
-				.text-min {
-					font-size: 0.7em;
-				}
-
-			</style>
-
-		';
+		// Style
+		$str .= $this->getStyle();
 
 		// Footer news
 		$str .= "</table></body></html>";
