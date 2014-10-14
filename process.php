@@ -17,11 +17,24 @@
 			// Banner principal
 			$imagens[] = setImageProperties('banner-principal');
 
+			// Banner rodapé
+			$imagens[] = setImageProperties('banner-rodape');
+
+			// Produtos
+			$imagens[] = setImageProperties('produto-1');
+			$imagens[] = setImageProperties('produto-2');
+			$imagens[] = setImageProperties('produto-3');
+
 			// Seleciona o template
 			switch ($_POST['template']) {
 				case 1:
 					include_once 'template/Template_1.php';
 					$template = new Template_1($dados, $imagens);
+					break;
+
+				case 2:
+					include_once 'template/Template_2.php';
+					$template = new Template_2($dados, $imagens);
 					break;
 				
 				default:

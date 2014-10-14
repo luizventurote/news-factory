@@ -10,4 +10,4 @@ define('URL_NEWS', MAIN_URL.'/news');
 define('URL_IMG', MAIN_URL.'/img');
 
 // Quantidade de templates
-define("QTD_TEMPLATES", 1);
+define("QTD_TEMPLATES", 2);

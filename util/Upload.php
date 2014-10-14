@@ -94,7 +94,7 @@ class Upload {
 		$extensao = $this->getExtensao(); 
 
 		//gera um nome unico para a imagem em funcao do tempo 
-		$this->novo_nome = time() . '.' . $extensao; 
+		$this->novo_nome = time().rand().'.' . $extensao; 
 
 		//localizacao do arquivo 
 		$destino = $this->pasta . $this->novo_nome; 

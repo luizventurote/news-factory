@@ -1,6 +1,7 @@
 <?php include_once 'inc/header.php'; ?>
 <?php include_once 'template/Template.php'; ?>
 <?php include_once 'template/Template_1.php'; ?>
+<?php include_once 'template/Template_2.php'; ?>
 
 <?php
 
@@ -15,6 +16,10 @@
 	switch ($template) {
 		case 1:
 			$template = new Template_1();
+			break;
+
+		case 2:
+			$template = new Template_2();
 			break;
 		
 		default:

@@ -42,74 +42,9 @@ Class Template {
 
 	private function getFooter() {}
 
-	public function getContent() {
+	public function getContent() {}
 
-		$str = '<h1>Teste</h1>';
-
-		return $str;
-
-	}
-
-	public function getStyle() {
-
-		$str = '<style type="text/css">
-		
-				* {
-					padding: 0;
-					margin: 0;
-				}
-
-				body {
-					color: #000;
-					font-family: "Helvetica", "Arial", sans-serif; 
-					font-weight: normal; 
-					line-height: 1.3;
-				}
-
-				table {
-					border-collapse: collapse;
-			        border-spacing: 0;
-					width:100%;
-					height: auto;
-					margin:0px;padding:0px;
-				}
-
-				td {
-					vertical-align:middle;
-					text-align:left;
-					padding:0px;
-				}
-
-				img {
-					border: 0;
-				}
-
-				.table-main {
-					margin: auto;
-					width: 570px;
-				}
-
-				.table-inside tr td {
-					text-align: center;
-					padding-bottom: 14px;
-				}
-
-				.table-inside tr td:first-child {
-					text-align: left;
-				}
-
-				.table-inside tr td:last-child {
-					text-align: right;
-				}
-
-				.text-min {
-					font-size: 0.7em;
-				}
-
-			</style>';
-
-			$str;
-	}
+	public function getStyle() {}
 
 	public function saveHTML() {
 
