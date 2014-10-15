@@ -36,6 +36,11 @@
 					include_once 'template/Template_2.php';
 					$template = new Template_2($dados, $imagens);
 					break;
+
+				case 3:
+					include_once 'template/Template_3.php';
+					$template = new Template_3($dados, $imagens);
+					break;
 				
 				default:
 					include_once 'template/Template.php';
