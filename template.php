@@ -8,7 +8,6 @@ for ($i=1; $i<=QTD_TEMPLATES; $i++) {
 	include_once 'template/Template_'.$i.'.php'; 
 }
 
-
 	if( !empty($_GET["template"]) ) { 
 	
 		$template = $_GET["template"];
@@ -16,6 +15,8 @@ for ($i=1; $i<=QTD_TEMPLATES; $i++) {
 	} else {
 		$template = 0;	
 	}
+
+	$template_id = $template;
 
 	switch ($template) {
 		case 1:
@@ -35,8 +36,16 @@ for ($i=1; $i<=QTD_TEMPLATES; $i++) {
 			break;
 	}
 
+	echo '<div class="panel panel-default">
+			<div class="panel-heading">
+				<a href="index.php" class="btn btn-default panel-heading-right">&larr; Voltar</a>
+				<h3>Template '.$template_id.'</h3>
+			</div>
+				<div class="panel-body">';
+
 	// Print form
 	echo $template->getForm();
 
+	echo '</div></div>';
 
 include_once 'inc/footer.php'; ?>

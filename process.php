@@ -53,20 +53,20 @@
 		// Renderiza HTML
 		$template->saveHTML();
 
+
 	?>
 
-	<?php echo $template->html_template; ?>
+	<div class="news-preview">
+		<?php echo $template->html_template; ?>
+	</div>
 
-	<br><br>
+	<div class="panel panel-default">
+		<div class="panel-heading">Código da News</div>
+		<div class="panel-body">
+			<textarea class="form-control" rows="10"><?php echo $template->html_template; ?></textarea>
+		</div>
+	</div>
 
-	<textarea><?php echo $template->html_template; ?></textarea>
-
-	<br>
-
-	<a href="index.php">Gerar nova news</a>
-
-	<br>
-	<br>
-	<br>
+	<a href="index.php" class="btn btn-primary btn-lg btn-block">Gerar nova news</a>
 
 <?php include_once 'inc/footer.php'; ?>

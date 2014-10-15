@@ -30,6 +30,10 @@ Class Template {
 		
 		$this->html_template = $this->getHeader().$this->getContent().$this->getFooter();
 
+		$string = trim(preg_replace('/\s\s+/', ' ', $this->html_template));
+
+		$this->html_template = trim($string);
+
 	} 
 
 	public function getTemplate() {

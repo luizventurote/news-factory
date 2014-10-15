@@ -1,19 +1,13 @@
 <?php include_once 'inc/header.php'; ?>
 
-	<h1>Rapid News</h1>
+	<div class="mim-page">
 
-	<p>Selecione um template</p>
+		<h1>Construtor de News</h1>	
 
-	<ul>
-
-		<?php for ($i=1; $i <= QTD_TEMPLATES; $i++): ?>
-
-		<li>
-			<a href="template.php?template=<?= $i ?>">Template <?= $i ?></a>
-		</li>
-		
+		<?php for ($i=1; $i<=QTD_TEMPLATES; $i++): ?>
+			<a class="btn btn-default btn-lg btn-block" style="margin-bottom: 10px" href="template.php?template=<?= $i ?>">Template <?= $i ?></a>
 		<?php endfor; ?>
 
-	</ul>
+	</div>
 
 <?php include_once 'inc/footer.php'; ?>

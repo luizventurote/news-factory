@@ -12,72 +12,72 @@ Class Template_3 extends Template {
 		// Informações da news
 		$str .= '<h3>Informações da news</h3>
 
-				<p>
-					<label>Título</label>
-					<input type="text" name="news-titulo">
-				</p>';
+				<div class="form-group">
+					<label for="newstitulo">Título da News</label>
+					<input type="text" class="form-control" id="newstitulo" placeholder="Digite o título da news" name="news-titulo" required>
+				</div><hr>';
 
 		// Banner Principal
 		$str .= '<h3>Banner Principal</h3>
+
+				<div class="form-group">
+					<label for="bannerprincipalurl">Imagem</label>
+					<input type="file" id="bannerprincipalurl" name="banner-principal-url" accept="image/*" required>
+				</div>
 	
-				<p>
-					<label>Imagem</label>
-					<input type="file" name="banner-principal-url" accept="image/*">
-				</p>
+				<div class="form-group">
+					<label for="bannerprincipalnome">Nome</label>
+					<input type="text" class="form-control" id="bannerprincipalnome" name="banner-principal-nome">
+				</div>
 
-				<p>
-					<label>Nome</label>
-					<input type="text" name="banner-principal-nome" accept="image/*">
-				</p>
-
-				<p>
-					<label>Link</label>
-					<input type="text" name="banner-principal-link" accept="image/*">
-				</p>';
+				<div class="form-group">
+					<label for="bannerprincipallink">Link</label>
+					<input type="text" class="form-control" id="bannerprincipallink" name="banner-principal-link">
+				</div><hr>';
 
 		for($i=1; $i<=2; $i++) { 
 			
 			// Produtos
 			$str .= '<h3>Produto '.$i.'</h3>
-	
-				<p>
-					<label>Imagem</label>
-					<input type="file" name="produto-'.$i.'-url" accept="image/*">
-				</p>
 
-				<p>
-					<label>Nome</label>
-					<input type="text" name="produto-'.$i.'-nome" accept="image/*">
-				</p>
+				<div class="form-group">
+					<label for="produto'.$i.'url">Imagem</label>
+					<input type="file" id="produto'.$i.'url" name="produto-'.$i.'-url" accept="image/*" required>
+				</div>
 
-				<p>
-					<label>Link</label>
-					<input type="text" name="produto-'.$i.'-link" accept="image/*">
-				</p>';
+				<div class="form-group">
+					<label for="produto'.$i.'nome">Nome</label>
+					<input type="text" class="form-control" id="produto'.$i.'nome" name="produto-'.$i.'-nome">
+				</div>
+
+				<div class="form-group">
+					<label for="produto'.$i.'link">Nome</label>
+					<input type="text" class="form-control" id="produto'.$i.'link" name="produto-'.$i.'-link">
+				</div><hr>';
 		}
 
 		// Banner do footer
 		$str .= '<h3>Banner do rodapé</h3>
-	
-				<p>
-					<label>Imagem</label>
-					<input type="file" name="banner-rodape-url" accept="image/*">
-				</p>
 
-				<p>
-					<label>Nome</label>
-					<input type="text" name="banner-rodape-nome" accept="image/*">
-				</p>
+				<div class="form-group">
+					<label for="bannerrodapeurl">Imagem</label>
+					<input type="file" id="bannerrodapeurl" name="banner-rodape-url" accept="image/*" required>
+				</div>
 
-				<p>
-					<label>Link</label>
-					<input type="text" name="banner-rodape-link" accept="image/*">
-				</p>';
+				<div class="form-group">
+					<label for="bannerrodapenome">Nome</label>
+					<input type="text" class="form-control" id="bannerrodapenome" name="banner-rodape-nome">
+				</div>
+
+				<div class="form-group">
+					<label for="bannerrodapelink">Link</label>
+					<input type="text" class="form-control" id="bannerrodapelink" name="banner-rodape-link">
+				</div><hr>';
 
 		// Footer
 		$str .= '<input type="hidden" name="template" value="3">
 				
-				<input type="submit" name="submit"> 
+				<input type="submit" class="btn btn-primary btn-lg btn-block" value="Gerar news" name="submit"> 
 
 			</form>';
 
@@ -186,7 +186,7 @@ Class Template_3 extends Template {
 			
 			<tr>
 				<td style="text-align: center; padding: 5px 0">
-					<p class="text-min">CONFIRA A POLÍTICA DE TROCA EM: <a href="http://goo.gl/YluLKI">http://goo.gl/YluLKI</a></p>
+					<p class="text-min">POLÍTICA DE TROCA EM: <a href="http://goo.gl/YluLKI">http://goo.gl/YluLKI</a></p>
 				</td>
 			</tr>
 
