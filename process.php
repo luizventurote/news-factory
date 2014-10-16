@@ -54,7 +54,7 @@
 		}
 
 		// Renderiza HTML
-		$template->saveHTML();
+		// $template->saveHTML();
 
 
 	?>

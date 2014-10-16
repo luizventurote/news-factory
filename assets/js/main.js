@@ -21,7 +21,7 @@ $(document).ready(function(){
 
 		// Verifica a quantidade de campos
 		if(produto_qtd <= fields_qtd_max) {
-			produto_wrapper.append('<div id="produto_'+produto_qtd+'"><hr><h3>Produto '+produto_qtd+'</h3><div class="form-group"><label for="produto'+produto_qtd+'url">Imagem</label><input type="file" id="produto'+produto_qtd+'url" name="produto-'+produto_qtd+'-url" accept="image/*" required></div><div class="form-group"><label for="produto'+produto_qtd+'nome">Nome</label><input type="text" class="form-control" id="produto'+produto_qtd+'nome" name="produto-'+produto_qtd+'-nome"></div><div class="form-group"><label for="produto'+produto_qtd+'link">Nome</label><input type="text" class="form-control" id="produto'+produto_qtd+'link" name="produto-'+produto_qtd+'-link"></div></div>');
+			produto_wrapper.append('<div id="produto_'+produto_qtd+'"><hr><h3>Produto '+produto_qtd+'</h3><div class="form-group"><label for="produto'+produto_qtd+'url">Imagem</label><input type="file" id="produto'+produto_qtd+'url" name="produto-'+produto_qtd+'-url" accept="image/*" required></div><div class="form-group"><label for="produto'+produto_qtd+'nome">Nome</label><input type="text" class="form-control" id="produto'+produto_qtd+'nome" name="produto-'+produto_qtd+'-nome"></div><div class="form-group"><label for="produto'+produto_qtd+'link">Link</label><input type="text" class="form-control" id="produto'+produto_qtd+'link" name="produto-'+produto_qtd+'-link"></div></div>');
 		
 			// Remove o botão de add
 			if(produto_qtd == fields_qtd_max) {

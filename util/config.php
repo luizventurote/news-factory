@@ -1,7 +1,7 @@
 <?php
 
 // URL Principal
-define('MAIN_URL', 'http://blog.videbula.com.br/news');
+define('MAIN_URL', 'http://localhost/rapid-news');
 
 // URL da pasta de news
 define('URL_NEWS', MAIN_URL.'/news');

@@ -102,21 +102,21 @@ Class Template {
 
 	public function saveHTML() {
 
-		$doc = new DOMDocument();
-		$doc->loadHTML($this->html_template);
-		$doc->saveHTML();
+		// $doc = new DOMDocument();
+		// $doc->loadHTML($this->html_template);
+		// $doc->saveHTML();
 
-		//gera um nome unico para o arquivo
+		// //gera um nome unico para o arquivo
 
-		if( !empty($this->dados_page['news-titulo']) ) {
-			$novo_nome = 'news/'.$this->dados_page['news-titulo'].'_'.time().'.html';
-		} else {
-			$novo_nome = 'news/'.time().'.html'; 	
-		}
+		// if( !empty($this->dados_page['news-titulo']) ) {
+		// 	$novo_nome = 'news/'.$this->dados_page['news-titulo'].'_'.md5(time().rand()).'.html';
+		// } else {
+		// 	$novo_nome = 'news/'.md5(time().rand()).'.html'; 	
+		// }
 
-		#Criar o arquivo
-		$fp = fopen($novo_nome, "w");
-		$fw = fwrite($fp, $doc->saveHTML());
+		// #Criar o arquivo
+		// $fp = fopen($novo_nome, "w");
+		// $fw = fwrite($fp, $doc->saveHTML());
 
 	}
 

@@ -55,7 +55,7 @@ Class Template_2 extends Template {
 						</div>
 
 						<div class="form-group">
-							<label for="produto1link">Nome</label>
+							<label for="produto1link">Link</label>
 							<input type="text" class="form-control" id="produto1link" name="produto-1-link">
 						</div>
 
