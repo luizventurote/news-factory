@@ -35,26 +35,43 @@ Class Template_2 extends Template {
 					<input type="text" class="form-control" id="bannerprincipallink" name="banner-principal-link">
 				</div><hr>';
 
-		for($i=1; $i<=3; $i++) { 
-			
-			// Produtos
-			$str .= '<h3>Produto '.$i.'</h3>
+		// Produto
+			$str .= '
 
-				<div class="form-group">
-					<label for="produto'.$i.'url">Imagem</label>
-					<input type="file" id="produto'.$i.'url" name="produto-'.$i.'-url" accept="image/*" required>
+				<div id="produto_wrapper">
+
+					<div id="produto_1">
+
+						<h3>Produto 1</h3>
+
+						<div class="form-group">
+							<label for="produto1url">Imagem</label>
+							<input type="file" id="produto1url" name="produto-1-url" accept="image/*" required>
+						</div>
+
+						<div class="form-group">
+							<label for="produto1nome">Nome</label>
+							<input type="text" class="form-control" id="produto1nome" name="produto-1-nome">
+						</div>
+
+						<div class="form-group">
+							<label for="produto1link">Nome</label>
+							<input type="text" class="form-control" id="produto1link" name="produto-1-link">
+						</div>
+
+					</div>
+
 				</div>
 
-				<div class="form-group">
-					<label for="produto'.$i.'nome">Nome</label>
-					<input type="text" class="form-control" id="produto'.$i.'nome" name="produto-'.$i.'-nome">
+				<div id="btn_produto_wrapper">
+
+					<button id="add_produto" class="btn btn-primary" type="button">Adicionar produto +</button>
+
+					<button id="remove_produto" class="btn btn-danger" style="display: none;" type="button">Remover produto</button>
+
 				</div>
 
-				<div class="form-group">
-					<label for="produto'.$i.'link">Nome</label>
-					<input type="text" class="form-control" id="produto'.$i.'link" name="produto-'.$i.'-link">
-				</div><hr>';
-		}
+				<hr>';
 
 		// Banner do footer
 		$str .= '<h3>Banner do rodapé</h3>
@@ -89,9 +106,13 @@ Class Template_2 extends Template {
 		// Pega as imagens
 		$banner_principal 	= $this->getImage('banner-principal');
 		$banner_rodape 		= $this->getImage('banner-rodape');
+
 		$banner_produto_1 	= $this->getImage('produto-1');
 		$banner_produto_2 	= $this->getImage('produto-2');
 		$banner_produto_3 	= $this->getImage('produto-3');
+		$banner_produto_4 	= $this->getImage('produto-4');
+		$banner_produto_5 	= $this->getImage('produto-5');
+		$banner_produto_6 	= $this->getImage('produto-6');
 
 		// Header news
 		$str = "<html>
@@ -135,25 +156,68 @@ Class Template_2 extends Template {
 					
 					<table class="table-inside">
 						<tr>';
-							
-						$str .= '
-							<td>
-								<a href="'.$banner_produto_1['link'].'"><img src="'.URL_IMG.'/'.$banner_produto_1['url'].'" alt="'.$banner_produto_1['nome'].'" /></a>
-							</td>
-						';
-
-						$str .= '
-							<td>
-								<a href="'.$banner_produto_2['link'].'"><img src="'.URL_IMG.'/'.$banner_produto_2['url'].'" alt="'.$banner_produto_2['nome'].'" /></a>
-							</td>
-						';
-
-						$str .= '
-							<td>
-								<a href="'.$banner_produto_3['link'].'"><img src="'.URL_IMG.'/'.$banner_produto_3['url'].'" alt="'.$banner_produto_3['nome'].'" /></a>
-							</td>
-						';
 						
+						if($banner_produto_1 != null) {
+							$str .= '
+								<td>
+									<a href="'.$banner_produto_1['link'].'"><img src="'.URL_IMG.'/'.$banner_produto_1['url'].'" alt="'.$banner_produto_1['nome'].'" /></a>
+								</td>
+							';
+						}
+
+						if($banner_produto_2 != null) {
+							$str .= '
+								<td>
+									<a href="'.$banner_produto_2['link'].'"><img src="'.URL_IMG.'/'.$banner_produto_2['url'].'" alt="'.$banner_produto_2['nome'].'" /></a>
+								</td>
+							';
+						}
+
+						if($banner_produto_3 != null) {
+							$str .= '
+								<td>
+									<a href="'.$banner_produto_3['link'].'"><img src="'.URL_IMG.'/'.$banner_produto_3['url'].'" alt="'.$banner_produto_3['nome'].'" /></a>
+								</td>
+							';
+						}
+
+			$str .= '	</tr>
+					</table>
+
+				</td>
+			</tr>';
+
+			$str .= '
+			<tr>
+				<td>
+					
+					<table class="table-inside">
+						<tr>';
+
+						if($banner_produto_4 != null) {							
+							$str .= '
+								<td>
+									<a href="'.$banner_produto_4['link'].'"><img src="'.URL_IMG.'/'.$banner_produto_4['url'].'" alt="'.$banner_produto_4['nome'].'" /></a>
+								</td>
+							';
+						}
+
+						if($banner_produto_5 != null) {
+							$str .= '
+								<td>
+									<a href="'.$banner_produto_5['link'].'"><img src="'.URL_IMG.'/'.$banner_produto_5['url'].'" alt="'.$banner_produto_5['nome'].'" /></a>
+								</td>
+							';
+						}
+
+						if($banner_produto_6 != null) {
+							$str .= '
+								<td>
+									<a href="'.$banner_produto_6['link'].'"><img src="'.URL_IMG.'/'.$banner_produto_6['url'].'" alt="'.$banner_produto_6['nome'].'" /></a>
+								</td>
+							';
+						}
+
 			$str .= '	</tr>
 					</table>
 

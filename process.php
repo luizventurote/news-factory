@@ -24,6 +24,9 @@
 			$imagens[] = setImageProperties('produto-1');
 			$imagens[] = setImageProperties('produto-2');
 			$imagens[] = setImageProperties('produto-3');
+			$imagens[] = setImageProperties('produto-4');
+			$imagens[] = setImageProperties('produto-5');
+			$imagens[] = setImageProperties('produto-6');
 
 			// Seleciona o template
 			switch ($_POST['template']) {

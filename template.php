@@ -26,10 +26,6 @@ for ($i=1; $i<=QTD_TEMPLATES; $i++) {
 		case 2:
 			$template = new Template_2();
 			break;
-
-		case 3:
-			$template = new Template_3();
-			break;
 		
 		default:
 			$template = new Template();

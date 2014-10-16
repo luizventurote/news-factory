@@ -130,7 +130,15 @@ Class Template {
 	public function getImage($image_key) {
 
 		if( !empty($this->img_page)) {
-			return $this->img_page[$image_key];
+
+			if (array_key_exists($image_key, $this->img_page)) {
+			    return $this->img_page[$image_key];
+			} else {
+				return null;
+			}
+			
+		} else {
+			return null;
 		}
 		
 	}
