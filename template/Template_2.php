@@ -9,14 +9,6 @@ Class Template_2 extends Template {
 		// Topo
 		$str = '<form action="'.$this->process_page.'" method="POST" enctype="multipart/form-data">';
 
-		// Informações da news
-		$str .= '<h3>Informações da news</h3>
-
-				<div class="form-group">
-					<label for="newstitulo">Título da News</label>
-					<input type="text" class="form-control" id="newstitulo" placeholder="Digite o título da news" name="news-titulo" required>
-				</div><hr>';
-
 		// Banner Principal
 		$str .= '<h3>Banner Principal</h3>
 

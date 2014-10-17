@@ -5,19 +5,9 @@ Class Template {
 	public $html_template;
 	public $process_page 	= "process.php";
 	public $img_page 		= array();
-	public $dados_page 		= array();
 	public $img_url 		= URL_IMG;
 
-	function __construct($dados_template = null, $images_template = null) {
-
-		// Prepara o array de dados
-		if($dados_template != null) {
-			foreach($dados_template as $key) {
-				foreach($key as $value_key => $value) {
-					$this->dados_page[$value_key] = $value;
-				}
-			}
-		}
+	function __construct($images_template = null) {
 
 		// Prepara o array de imagens
 		if($images_template != null) {
@@ -100,32 +90,7 @@ Class Template {
 
 	}
 
-	public function saveHTML() {
-
-		// $doc = new DOMDocument();
-		// $doc->loadHTML($this->html_template);
-		// $doc->saveHTML();
-
-		// //gera um nome unico para o arquivo
-
-		// if( !empty($this->dados_page['news-titulo']) ) {
-		// 	$novo_nome = 'news/'.$this->dados_page['news-titulo'].'_'.md5(time().rand()).'.html';
-		// } else {
-		// 	$novo_nome = 'news/'.md5(time().rand()).'.html'; 	
-		// }
-
-		// #Criar o arquivo
-		// $fp = fopen($novo_nome, "w");
-		// $fw = fwrite($fp, $doc->saveHTML());
-
-	}
-
-	private function getForm() {
-
-		$str = '';
-
-		return $str;
-	}
+	private function getForm() {}
 
 	public function getImage($image_key) {
 

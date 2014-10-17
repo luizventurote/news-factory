@@ -11,9 +11,6 @@
 		// Salva as dados
 		if(isset($_POST["template"])) {
 
-			// Informações da news
-			$dados[] = getDataURL('news-titulo', 'POST');
-
 			// Banner principal
 			$imagens[] = setImageProperties('banner-principal');
 
@@ -32,22 +29,22 @@
 			switch ($_POST['template']) {
 				case 1:
 					include_once 'template/Template_1.php';
-					$template = new Template_1($dados, $imagens);
+					$template = new Template_1($imagens);
 					break;
 
 				case 2:
 					include_once 'template/Template_2.php';
-					$template = new Template_2($dados, $imagens);
+					$template = new Template_2($imagens);
 					break;
 
 				case 3:
 					include_once 'template/Template_3.php';
-					$template = new Template_3($dados, $imagens);
+					$template = new Template_3($imagens);
 					break;
 				
 				default:
 					include_once 'template/Template.php';
-					$template = new Template($dados, $imagens);
+					$template = new Template($imagens);
 					break;
 			}
 

@@ -8,13 +8,6 @@ Class Template_1 extends Template {
 
 		$str = '<form action="'.$this->process_page.'" method="POST" enctype="multipart/form-data">
 
-				<h3>Informações da news</h3>
-
-				<div class="form-group">
-					<label for="newstitulo">Título da News</label>
-					<input type="text" class="form-control" id="newstitulo" placeholder="Digite o título da news" name="news-titulo" required>
-				</div><hr>
-
 				<h3>Banner Principal</h3>
 
 				<div class="form-group">
