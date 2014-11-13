@@ -1,3 +1,1 @@
-# Rapid News #
-
-teste
+# News Factory #
