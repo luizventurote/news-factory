@@ -1,7 +1,7 @@
 <?php
 
 // URL Principal
-define('MAIN_URL', 'http://localhost/rapid-news');
+define('MAIN_URL', 'http://localhost/news-factory');
 
 // URL da pasta de imagens
 define('URL_IMG', MAIN_URL.'/img');

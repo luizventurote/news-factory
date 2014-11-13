@@ -3,7 +3,7 @@
 include_once 'inc/header.php'; 
 
 // Templates
-include_once 'template/Template.php'; 
+include_once 'template/Template.php';
 for ($i=1; $i<=QTD_TEMPLATES; $i++) { 
 	include_once 'template/Template_'.$i.'.php'; 
 }
