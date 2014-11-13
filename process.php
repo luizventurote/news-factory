@@ -1,6 +1,4 @@
-<?php include_once 'inc/header.php'; ?>
-
-	<?php 
+<?php include_once 'inc/header.php';
 
 		// Array de dados
 		$dados = array();
@@ -41,7 +39,7 @@
 					include_once 'template/Template_3.php';
 					$template = new Template_3($imagens);
 					break;
-				
+
 				default:
 					include_once 'template/Template.php';
 					$template = new Template($imagens);
@@ -52,7 +50,6 @@
 
 		// Renderiza HTML
 		// $template->saveHTML();
-
 
 	?>
 
