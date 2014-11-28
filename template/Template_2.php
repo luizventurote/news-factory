@@ -14,7 +14,7 @@ Class Template_2 extends Template {
 
 				<div class="form-group">
 					<label for="bannerprincipalurl">Imagem</label>
-					<input type="file" id="bannerprincipalurl" name="banner-principal-url" accept="image/*" required>
+					<input type="file" id="bannerprincipalurl" name="banner-principal-url" accept="image/*">
 				</div>
 	
 				<div class="form-group">
@@ -38,7 +38,7 @@ Class Template_2 extends Template {
 
 						<div class="form-group">
 							<label for="produto1url">Imagem</label>
-							<input type="file" id="produto1url" name="produto-1-url" accept="image/*" required>
+							<input type="file" id="produto1url" name="produto-1-url" accept="image/*">
 						</div>
 
 						<div class="form-group">
@@ -70,7 +70,7 @@ Class Template_2 extends Template {
 
 				<div class="form-group">
 					<label for="bannerrodapeurl">Imagem</label>
-					<input type="file" id="bannerrodapeurl" name="banner-rodape-url" accept="image/*" required>
+					<input type="file" id="bannerrodapeurl" name="banner-rodape-url" accept="image/*">
 				</div>
 
 				<div class="form-group">
