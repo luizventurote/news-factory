@@ -13,15 +13,29 @@
 			$imagens[] = setImageProperties('banner-principal');
 
 			// Banner rodapé
-			$imagens[] = setImageProperties('banner-rodape');
+			if(isset($_POST["banner-rodape"])) {
+				$imagens[] = setImageProperties('banner-rodape');
+			} 			
 
 			// Produtos
-			$imagens[] = setImageProperties('produto-1');
-			$imagens[] = setImageProperties('produto-2');
-			$imagens[] = setImageProperties('produto-3');
-			$imagens[] = setImageProperties('produto-4');
-			$imagens[] = setImageProperties('produto-5');
-			$imagens[] = setImageProperties('produto-6');
+			if(isset($_POST["produto-1"])) {
+				$imagens[] = setImageProperties('produto-1');
+			}
+			if(isset($_POST["produto-2"])) {
+				$imagens[] = setImageProperties('produto-2');
+			}
+			if(isset($_POST["produto-3"])) {
+				$imagens[] = setImageProperties('produto-3');
+			}
+			if(isset($_POST["produto-4"])) {
+				$imagens[] = setImageProperties('produto-4');
+			}
+			if(isset($_POST["produto-5"])) {
+				$imagens[] = setImageProperties('produto-5');
+			}
+			if(isset($_POST["produto-6"])) {
+				$imagens[] = setImageProperties('produto-6');
+			}
 
 			// Seleciona o template
 			switch ($_POST['template']) {

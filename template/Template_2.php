@@ -217,14 +217,16 @@ Class Template_2 extends Template {
 			</tr>';
 
 			// Banner rodapé
-			$str .= '
-			<tr>
-				<td>
-					<a href="'.$banner_rodape['link'].'">
-						<img style="display:block;" src="'.URL_IMG.'/'.$banner_rodape['url'].'" alt="'.$banner_rodape['nome'].'">
-					</a>
-				</td>
-			</tr>';
+			if(!empty($banner_rodape['url'])) {
+				$str .= '
+				<tr>
+					<td>
+						<a href="'.$banner_rodape['link'].'">
+							<img style="display:block;" src="'.URL_IMG.'/'.$banner_rodape['url'].'" alt="'.$banner_rodape['nome'].'">
+						</a>
+					</td>
+				</tr>';
+			}
 
 			$str .= '
 			<tr>
