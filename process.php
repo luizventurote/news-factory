@@ -10,30 +10,36 @@
 		if(isset($_POST["template"])) {
 
 			// Banner principal
-			$imagens[] = setImageProperties('banner-principal');
+			if(!isset($_POST["banner-principal"])) {
+				$imagens[] = setImageProperties('banner-principal');
+			}	
 
 			// Banner rodapé
-			if(isset($_POST["banner-rodape"])) {
+			if(!isset($_POST["banner-rodape"])) {
 				$imagens[] = setImageProperties('banner-rodape');
-			} 			
+			}
+
+			if(!isset($_POST["banner-rodape-2"])) {
+				$imagens[] = setImageProperties('banner-rodape-2');
+			}	
 
 			// Produtos
-			if(isset($_POST["produto-1"])) {
+			if(!isset($_POST["produto-1"])) {
 				$imagens[] = setImageProperties('produto-1');
 			}
-			if(isset($_POST["produto-2"])) {
+			if(!isset($_POST["produto-2"])) {
 				$imagens[] = setImageProperties('produto-2');
 			}
-			if(isset($_POST["produto-3"])) {
+			if(!isset($_POST["produto-3"])) {
 				$imagens[] = setImageProperties('produto-3');
 			}
-			if(isset($_POST["produto-4"])) {
+			if(!isset($_POST["produto-4"])) {
 				$imagens[] = setImageProperties('produto-4');
 			}
-			if(isset($_POST["produto-5"])) {
+			if(!isset($_POST["produto-5"])) {
 				$imagens[] = setImageProperties('produto-5');
 			}
-			if(isset($_POST["produto-6"])) {
+			if(!isset($_POST["produto-6"])) {
 				$imagens[] = setImageProperties('produto-6');
 			}
 

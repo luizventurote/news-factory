@@ -65,8 +65,8 @@ Class Template_2 extends Template {
 
 				<hr>';
 
-		// Banner do footer
-		$str .= '<h3>Banner do rodapé</h3>
+		// Banner do footer parte 1
+		$str .= '<h3>Banner do rodapé (Parte 1)</h3>
 
 				<div class="form-group">
 					<label for="bannerrodapeurl">Imagem</label>
@@ -81,6 +81,24 @@ Class Template_2 extends Template {
 				<div class="form-group">
 					<label for="bannerrodapelink">Link</label>
 					<input type="text" class="form-control" id="bannerrodapelink" name="banner-rodape-link">
+				</div><hr>';
+
+		// Banner do footer part 2
+		$str .= '<h3>Banner do rodapé (Parte 2)</h3>
+
+				<div class="form-group">
+					<label for="bannerrodape2url">Imagem</label>
+					<input type="file" id="bannerrodape2url" name="banner-rodape-2-url" accept="image/*">
+				</div>
+
+				<div class="form-group">
+					<label for="bannerrodape2nome">Nome</label>
+					<input type="text" class="form-control" id="bannerrodape2nome" name="banner-rodape-2-nome">
+				</div>
+
+				<div class="form-group">
+					<label for="bannerrodape2link">Link</label>
+					<input type="text" class="form-control" id="bannerrodape2link" name="banner-rodape-2-link">
 				</div><hr>';
 
 		// Footer
@@ -98,6 +116,7 @@ Class Template_2 extends Template {
 		// Pega as imagens
 		$banner_principal 	= $this->getImage('banner-principal');
 		$banner_rodape 		= $this->getImage('banner-rodape');
+		$banner_rodape_2 	= $this->getImage('banner-rodape-2');
 
 		$banner_produto_1 	= $this->getImage('produto-1');
 		$banner_produto_2 	= $this->getImage('produto-2');
@@ -217,15 +236,23 @@ Class Template_2 extends Template {
 			</tr>';
 
 			// Banner rodapé
-			if(!empty($banner_rodape['url'])) {
+			if(!empty($banner_rodape['nome'])) {
 				$str .= '
-				<tr>
-					<td>
-						<a href="'.$banner_rodape['link'].'">
+				<tr><td>
+						<a href="'.$banner_rodape['link'].'" style="float: left">
 							<img style="display:block;" src="'.URL_IMG.'/'.$banner_rodape['url'].'" alt="'.$banner_rodape['nome'].'">
 						</a>
-					</td>
-				</tr>';
+					';
+
+					if(!empty($banner_rodape_2['nome'])) {
+						$str .= '
+							<a href="'.$banner_rodape_2['link'].'" style="float: left">
+								<img style="display:block;" src="'.URL_IMG.'/'.$banner_rodape_2['url'].'" alt="'.$banner_rodape_2['nome'].'">
+							</a>
+						';
+					}
+
+				$str .= '</td></tr>';
 			}
 
 			$str .= '
